@@ -8,20 +8,21 @@ var port = process.env.PORT || 3001;
 var io = require('socket.io')(http);
  
 io.on('connection', function(socket) {
-    console.log('new connection');
+    console.log('New connection');
     const count = io.engine.clientsCount;
     console.log("Connected clients: " + count);
     io.emit('participants',count);
 
     // Called when the client calls socket.emit('message')
     socket.on('message', function(obj) {
-        console.log('Got message from client: ' + obj.msg);     
+        console.log('Chatlog - ' + obj.userid + ': ' + obj.msg);     
         // socket.broadcast.emit('message', msg); // to all, but the sender
         io.emit('message',obj); // to all, including the sender
     });
 
+    // Called when a client disconnects
     socket.on('disconnect', function() {
-        console.log('disconnection');
+        console.log('Disconnection');
         const count = io.engine.clientsCount;
         console.log("Connected clients: " + count);
         io.emit('participants',count);

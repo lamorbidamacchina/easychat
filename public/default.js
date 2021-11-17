@@ -7,11 +7,8 @@ window.onload = function () {
   // assegnare nome a utente
   let userid = "";
   if (localStorage.getItem("userid")) {
-    console.log(localStorage.getItem("userid"));
     userid = localStorage.getItem("userid");
   } else {
-    console.log(2222);
-    //userid = Math.random().toString(36).slice(2);
     userid = generateRandomString(8);
     localStorage.setItem("userid",userid);
   } 
@@ -29,7 +26,10 @@ window.onload = function () {
   // called when the server calls socket.broadcast('message')
   socket.on('message', function (obj) {
     prevChat = $("#chatBoard").html();
-    $("#chatBoard").html(prevChat + '<div class="msgRow">' + obj.userid + ": " + obj.msg + '</div>');
+    const ts = new Date().toLocaleString([], {year: 'numeric', month: 'numeric', day: 'numeric', hour: '2-digit', minute:'2-digit'});
+    $("#chatBoard").html(prevChat + '<div class="msgRow"><span class="userid">' + obj.userid + "</span><br />" + obj.msg + '<span class="ts">' + ts +'</span></div>');
+    var chatboard = document.getElementById("chatBoard");
+    chatboard.scrollTop = chatboard.scrollHeight;
     console.log(prevChat + obj.userid + ": " + obj.msg);
   });
 
