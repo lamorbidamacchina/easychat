@@ -6,11 +6,12 @@ body {
   background-image:  linear-gradient(30deg, #ececec 12%, transparent 12.5%, transparent 87%, #ececec 87.5%, #ececec), linear-gradient(150deg, #ececec 12%, transparent 12.5%, transparent 87%, #ececec 87.5%, #ececec), linear-gradient(30deg, #ececec 12%, transparent 12.5%, transparent 87%, #ececec 87.5%, #ececec), linear-gradient(150deg, #ececec 12%, transparent 12.5%, transparent 87%, #ececec 87.5%, #ececec), linear-gradient(60deg, #ececec77 25%, transparent 25.5%, transparent 75%, #ececec77 75%, #ececec77), linear-gradient(60deg, #ececec77 25%, transparent 25.5%, transparent 75%, #ececec77 75%, #ececec77);
   background-size: 22px 39px;
   background-position: 0 0, 0 0, 11px 19px, 11px 19px, 0 0, 11px 19px;
+  touch-action: none;
 }
 
 main, footer {opacity:1;}
 
-#chatBoard {height:510px; overflow-y: auto; text-align:left;}
+#chatBoard {height:400px; overflow-y: auto; text-align:left;}
 input#msg:focus {outline:none !important;}
 #chatBoard .msgRow {background:#fff; border-radius:0.5rem; border:1px solid #ccc; padding:0.4rem 1rem 1rem 0.4rem; margin: 0 0 0.4rem 0; overflow-wrap: break-word; position:relative;}
 #chatBoard .msgRow .ts {position:absolute; bottom: 4px; right: 4px; font-size: 0.7rem; color: #aaa;}

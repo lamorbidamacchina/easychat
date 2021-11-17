@@ -9,3 +9,8 @@ https://easy-chat-web-app.herokuapp.com/
 - login to heroku cli ("heroku login")
 - "heroku features:enable http-session-affinity -a NAME_OF_THE_APP"
 - deploy
+
+# todo
+- splash screen when no message yet, with some instructions
+- nicknames and colors
+- rooms?
