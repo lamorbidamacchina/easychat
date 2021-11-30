@@ -11,6 +11,7 @@ https://easy-chat-web-app.herokuapp.com/
 - deploy
 
 # todo
-- splash screen when no message yet, with some instructions
-- nicknames and colors
-- rooms?
+- rooms
+- fix main chatboard height with js
+- add a splash screen with some instructions, and a form for nickname and room, for first time users
+- nickname storage and display in chat instead of random num

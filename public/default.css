@@ -12,7 +12,7 @@ body {
 main, footer {opacity:1;}
 
 #chatBoard {height:400px; overflow-y: auto; text-align:left;}
-input#msg:focus {outline:none !important;}
+input#msg:focus {outline:none !important; box-shadow: none;}
 #chatBoard .msgRow {background:#fff; border-radius:0.5rem; border:1px solid #ccc; padding:0.4rem 1rem 1rem 0.4rem; margin: 0 0 0.4rem 0; overflow-wrap: break-word; position:relative;}
 #chatBoard .msgRow .ts {position:absolute; bottom: 4px; right: 4px; font-size: 0.7rem; color: #aaa;}
-span.userid {font-size: 0.8rem; font-weight: 600; color: #950c0c;}
+span.userid {font-size: 0.8rem; font-weight: 600; color: #950c0c; background: #eee; padding: 0 3px;}
