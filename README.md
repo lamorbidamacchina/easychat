@@ -1,9 +1,6 @@
 # easychat
 A basic chat with socket.io
 
-# live demo
-https://easy-chat-web-app.herokuapp.com/
-
 # deploy on heroku
 - create new app
 - login to heroku cli ("heroku login")
