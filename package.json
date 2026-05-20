@@ -5,7 +5,10 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node app.js"
+    "start": "node app.js",
+    "fly:scale:down": "flyctl scale count 0",
+    "fly:scale:up": "flyctl scale count 1",
+    "fly:status": "flyctl status --app easychat"
   },
   "author": "",
   "license": "ISC",
