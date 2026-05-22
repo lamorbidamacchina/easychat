@@ -5,7 +5,7 @@ var http = require('http').Server(app);
 var port = process.env.PORT || 3001;
 
 // setup my socket server
-var io = require('socket.io')(http);
+var io = require('socket.io')(http, { transports: ['websocket'] });
  
 io.on('connection', function(socket) {
 

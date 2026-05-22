@@ -1,5 +1,5 @@
 // setup my socket client
-var socket = io();
+var socket = io({ transports: ['websocket'] });
 
 
 // read room in querystring
